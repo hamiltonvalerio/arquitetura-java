@@ -1,0 +1,9 @@
+br\edu\infnet\appcurriculumvitae\model\domain\Curriculo.class
+br\edu\infnet\appcurriculumvitae\model\domain\Formacao.class
+br\edu\infnet\appcurriculumvitae\model\domain\AtuacaoProfissional.class
+br\edu\infnet\appcurriculumvitae\model\domain\Academica.class
+br\edu\infnet\appcurriculumvitae\model\domain\Canditato.class
+br\edu\infnet\appcurriculumvitae\model\domain\Complementar.class
+br\edu\infnet\appcurriculumvitae\model\domain\Evento.class
+br\edu\infnet\appcurriculumvitae\model\domain\Projeto.class
+br\edu\infnet\appcurriculumvitae\AppcurriculumvitaeApplication.class
