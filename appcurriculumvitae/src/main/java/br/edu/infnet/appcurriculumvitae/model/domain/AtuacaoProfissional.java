@@ -1,14 +1,14 @@
 package br.edu.infnet.appcurriculumvitae.model.domain;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 public class AtuacaoProfissional extends Registro{
 	
 	private String nomeEmpresa;
 	private String cargo;
 	private String funcao;
-	private Timestamp dataInicio;
-	private Timestamp dataFim;
+	private LocalDate dataInicio;
+	private LocalDate dataFim;
 	
 	public String getNomeEmpresa() {
 		return nomeEmpresa;
@@ -28,16 +28,16 @@ public class AtuacaoProfissional extends Registro{
 	public void setFuncao(String funcao) {
 		this.funcao = funcao;
 	}
-	public Timestamp getDataInicio() {
+	public LocalDate getDataInicio() {
 		return dataInicio;
 	}
-	public void setDataInicio(Timestamp dataInicio) {
+	public void setDataInicio(LocalDate dataInicio) {
 		this.dataInicio = dataInicio;
 	}
-	public Timestamp getDataFim() {
+	public LocalDate getDataFim() {
 		return dataFim;
 	}
-	public void setDataFim(Timestamp dataFim) {
+	public void setDataFim(LocalDate dataFim) {
 		this.dataFim = dataFim;
 	}
 	@Override

@@ -1,13 +1,13 @@
 package br.edu.infnet.appcurriculumvitae.model.domain;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Canditato {
 	
 	private long id;
 	private String nome;
-	private Timestamp dataNascimento;
+	private LocalDate dataNascimento;
 	
 	public long getId() {
 		return id;
@@ -21,10 +21,10 @@ public class Canditato {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Timestamp getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(Timestamp dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	

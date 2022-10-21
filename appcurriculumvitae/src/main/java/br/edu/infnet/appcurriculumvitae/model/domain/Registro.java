@@ -1,10 +1,10 @@
 package br.edu.infnet.appcurriculumvitae.model.domain;
 
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 public abstract class Registro {
 	private long id;
-	private Timestamp dataAlteracao;
+	private LocalDate dataAlteracao;
 	
 	public long getId() {
 		return id;
@@ -12,10 +12,10 @@ public abstract class Registro {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Timestamp getDataAlteracao() {
+	public LocalDate getDataAlteracao() {
 		return dataAlteracao;
 	}
-	public void setDataAlteracao(Timestamp dataAlteracao) {
+	public void setDataAlteracao(LocalDate dataAlteracao) {
 		this.dataAlteracao = dataAlteracao;
 	}
 	
