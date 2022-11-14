@@ -3,7 +3,7 @@ package br.edu.infnet.appcurriculumvitae.model.domain;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Canditato {
+public class Candidato {
 	
 	private long id;
 	private String nome;
@@ -41,7 +41,7 @@ public class Canditato {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Canditato other = (Canditato) obj;
+		Candidato other = (Candidato) obj;
 		return id == other.id && Objects.equals(nome, other.nome);
 	}
 	

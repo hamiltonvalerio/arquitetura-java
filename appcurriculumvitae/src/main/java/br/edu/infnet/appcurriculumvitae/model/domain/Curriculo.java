@@ -8,7 +8,7 @@ public class Curriculo {
 	private long id;
 	private String nome;
 	private String resumo;
-	private Canditato canditato;
+	private Candidato canditato;
 	private List<Formacao> formacoes;
 	private List<AtuacaoProfissional> atuacoesProfissionais;
 	private List<Projeto> projetos;
@@ -31,10 +31,10 @@ public class Curriculo {
 	public void setResumo(String resumo) {
 		this.resumo = resumo;
 	}
-	public Canditato getCanditato() {
+	public Candidato getCanditato() {
 		return canditato;
 	}
-	public void setCanditato(Canditato canditato) {
+	public void setCanditato(Candidato canditato) {
 		this.canditato = canditato;
 	}
 	public List<Formacao> getFormacoes() {
