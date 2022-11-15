@@ -1,9 +1,16 @@
 package br.edu.infnet.appcurriculumvitae.model.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "formacao")
 public class Formacao extends Registro {
 
 	private String instituicao;
+	
 	private String curso;
+	
 	private String nivel;
 
 

@@ -2,6 +2,11 @@ package br.edu.infnet.appcurriculumvitae.model.domain;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "atuacaoprofissional")
 public class AtuacaoProfissional extends Registro{
 	
 	private String nomeEmpresa;
