@@ -7,12 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Candidato")
+@Table(name = "candidato")
 public class Candidato {
 
 	@Id
@@ -23,9 +21,7 @@ public class Candidato {
 
 	private LocalDate dataNascimento;
 	
-	@ManyToOne
-	@JoinColumn(name = "idUsuario")
-	private Usuario usuario;
+	private Integer usuario;
 
 	public long getId() {
 		return id;
@@ -73,11 +69,11 @@ public class Candidato {
 		return "Canditato [id=" + id + ", nome=" + nome + ", dataNascimento=" + dataNascimento + "]";
 	}
 
-	public Usuario getUsuario() {
+	public Integer getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
+	public void setUsuario(Integer usuario) {
 		this.usuario = usuario;
 	}
 
