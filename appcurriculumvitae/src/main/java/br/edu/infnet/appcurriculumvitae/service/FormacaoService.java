@@ -5,24 +5,24 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.infnet.appcurriculumvitae.clients.IFormacaoClient;
 import br.edu.infnet.appcurriculumvitae.model.domain.Formacao;
-import br.edu.infnet.appcurriculumvitae.repository.FormacaoRepository;
 
 @Service
 public class FormacaoService {
-
+	
 	@Autowired
-	private FormacaoRepository formacaoRepository;
+	private IFormacaoClient iFormacaoClient;
 	
 	public void incluir(Formacao formacao) {
-		formacaoRepository.save(formacao);		
+		iFormacaoClient.incluir(formacao);
 	}
 	
 	public void excluir(Integer id) {
-		formacaoRepository.deleteById(id);
+		iFormacaoClient.excluir(id);
 	}
 	
 	public Collection<Formacao> obterLista(){
-		return (Collection<Formacao>) formacaoRepository.findAll();
+		return iFormacaoClient.obterLista();
 	}
 }

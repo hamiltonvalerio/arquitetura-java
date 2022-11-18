@@ -1,6 +1,11 @@
-package br.edu.infnet.appcurriculumvitae.model.domain;
+package br.edu.infnet.apiformacao.model.domain;
 
-public class Formacao extends Registro {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "formacao")
+public class Formacao{
 
 	private String instituicao;
 	
@@ -35,8 +40,9 @@ public class Formacao extends Registro {
 
 	@Override
 	public String toString() {
-		return "Formacao [instituicao=" + instituicao + ", curso=" + curso + ", nivel=" + nivel
-				+ ", getDataAlteracao()=" + getDataAlteracao() + "]";
+		return "Formacao [instituicao=" + instituicao + ", curso=" + curso + ", nivel=" + nivel + "]";
 	}
+
+	
 
 }
