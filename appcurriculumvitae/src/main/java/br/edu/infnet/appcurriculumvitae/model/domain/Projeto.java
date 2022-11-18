@@ -2,11 +2,7 @@ package br.edu.infnet.appcurriculumvitae.model.domain;
 
 import java.sql.Timestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "projeto")
 public class Projeto extends Registro {
 
 	private String titulo;

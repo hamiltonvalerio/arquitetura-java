@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import br.edu.infnet.appcurriculumvitae.model.domain.Formacao;
+import br.edu.infnet.appcurriculumvitae.model.domain.Projeto;
 
-@FeignClient(url = "localhost:8082/api/formacao", name = "formacaoClient")
-public interface IFormacaoClient {
+@FeignClient(url = "localhost:8083/api/projeto", name = "projetoClient")
+public interface IProjetoClient {
 
 	@PostMapping(value = "/incluir")
-	public void incluir(@RequestBody Formacao formacao);
+	public void incluir(@RequestBody Projeto projeto);
 	
 	@DeleteMapping(value = "/{id}/excluir")
 	public void excluir(@PathVariable Integer id);
 	
 	@GetMapping(value = "/listar")
-	public List<Formacao> obterLista();
+	public List<Projeto> obterLista();
 	
 }

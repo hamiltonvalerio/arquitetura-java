@@ -25,4 +25,5 @@ public class FormacaoService {
 	public Collection<Formacao> obterLista(){
 		return iFormacaoClient.obterLista();
 	}
+	
 }

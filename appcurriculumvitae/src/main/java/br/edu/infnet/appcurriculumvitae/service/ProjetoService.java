@@ -5,24 +5,25 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.edu.infnet.appcurriculumvitae.clients.IProjetoClient;
 import br.edu.infnet.appcurriculumvitae.model.domain.Projeto;
-import br.edu.infnet.appcurriculumvitae.repository.ProjetoRepository;
 
 @Service
 public class ProjetoService {
 	
 	@Autowired
-	private ProjetoRepository projetoRepository;
+	private IProjetoClient iProjetoClient;
 	
 	public void incluir(Projeto projeto) {
-		projetoRepository.save(projeto);		
+		iProjetoClient.incluir(projeto);
 	}
 	
 	public void excluir(Integer id) {
-		projetoRepository.deleteById(id);
+		iProjetoClient.excluir(id);
 	}
 	
 	public Collection<Projeto> obterLista(){
-		return (Collection<Projeto>) projetoRepository.findAll();
+		return iProjetoClient.obterLista();
 	}
+	
 }
