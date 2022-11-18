@@ -32,13 +32,10 @@ public class Curriculo {
 	@ManyToMany(cascade = CascadeType.DETACH)
 	private List<Registro> registros;
 
-	@ManyToMany
 	private List<Formacao> formacoes;
 
-	@ManyToMany
 	private List<AtuacaoProfissional> atuacoesProfissionais;
 
-	@ManyToMany
 	private List<Projeto> projetos;
 
 	private Timestamp dataAlteracao;

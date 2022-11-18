@@ -3,11 +3,18 @@ package br.edu.infnet.apiprojeto.model.domain;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "projeto")
 public class Projeto{
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 
 	private String titulo;
 
@@ -16,6 +23,14 @@ public class Projeto{
 	private Timestamp dataInicio;
 
 	private Timestamp dataFim;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getTitulo() {
 		return titulo;

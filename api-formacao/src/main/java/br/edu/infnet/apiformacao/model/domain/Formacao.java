@@ -1,18 +1,32 @@
 package br.edu.infnet.apiformacao.model.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "formacao")
-public class Formacao{
+public class Formacao {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 
 	private String instituicao;
-	
+
 	private String curso;
-	
+
 	private String nivel;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
 	public String getInstituicao() {
 		return instituicao;
@@ -42,7 +56,5 @@ public class Formacao{
 	public String toString() {
 		return "Formacao [instituicao=" + instituicao + ", curso=" + curso + ", nivel=" + nivel + "]";
 	}
-
-	
 
 }
